@@ -1,0 +1,41 @@
+# Custom Scalars
+scalar Date
+
+type Query {
+  # UserWord
+  userWords(args: UserWordFindInput): [UserWord]!
+  userWord(args: UserWordFindOneInput): UserWord
+
+  # Word
+  words(args: WordFindInput): [Word]!
+  word(args: WordFindOneInput): UserWord
+
+  # WordEssence
+  wordEssences(args: WordEssenceFindInput): [WordEssence]!
+  wordEssence(args: WordEssenceFindOneInput): WordEssence
+
+  # Language
+  language(args: LanguageFindOneInput): Language
+
+  # User
+  users: [User]!
+  user(id: ID!): User
+}
+
+type Mutation {
+  # WordEssence
+  createWordEssence(args: WordEssenceCreateInput!): WordEssence!
+  updateWordEssence(args: WordEssenceUpdateInput!): WordEssence!
+
+  # Word
+  createWord(args: WordCreateInput!): Word!
+  updateWord(args: WordUpdateInput!): Word!
+
+  # UserWord
+  createUserWord(userWord: UserWordCreateInput!): UserWord!
+  updateUserWord(userWord: UserWordUpdateInput!): UserWord!
+
+  # Language
+  createLanguage(args: LanguageCreateInput!): Language!
+  updateLanguage(args: LanguageUpdateInput!): Language!
+}

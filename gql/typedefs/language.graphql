@@ -1,0 +1,24 @@
+# Types
+type Language implements Timestamps {
+    id: ID!
+    name: String!
+    words: [Word]
+    # Interface required
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+# Inputs
+input LanguageCreateInput {
+    name: String!
+}
+
+input LanguageUpdateInput {
+    name: String
+    words: [ID]
+}
+
+input LanguageFindOneInput {
+    id: ID
+    name: String
+}

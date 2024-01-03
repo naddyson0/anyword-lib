@@ -1,0 +1,32 @@
+# Types
+type WordEssence implements Timestamps {
+    id: ID!
+    english: Word
+    languagesLinks: [LanguageLink]!
+
+    # Interface required
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+# Inputs
+input WordEssenceCreateInput {
+    englishWord: ID!
+    languageLinks: [ID]
+}
+
+input WordEssenceFindOneInput {
+    id: ID
+    englishWord: ID
+}
+
+input WordEssenceFindInput {
+    english: ID
+    languagesLinks: [ID]
+}
+
+input WordEssenceUpdateInput {
+    word: String
+    translation: String
+}
+

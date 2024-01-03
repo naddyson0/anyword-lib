@@ -1,0 +1,12 @@
+{
+  "name": "anyword-lib",
+  "version": "1.0.0",
+  "description": "Lib for interaction with LeetSpeak infrastructure",
+  "main": "index.ts",
+  "author": "LeetSpeakCrew",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

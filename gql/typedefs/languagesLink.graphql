@@ -1,0 +1,20 @@
+# Types
+type LanguageLink implements Timestamps {
+    id: ID!
+    wordEssence: WordEssence!
+    word: Word!
+    language: Language!
+
+    # Interface required
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+# Inputs
+input LanguageLinkCreateInput {
+    name: String!
+}
+
+input LanguageLinkUpdateInput {
+    name: String
+}

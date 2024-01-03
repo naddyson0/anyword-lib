@@ -1,0 +1,43 @@
+# Types
+type UserWord implements Timestamps {
+    id: ID!
+    word: Word!
+    user: User!
+    translation: Word!
+    wordEssence: WordEssence!
+
+    # Interface required
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+# Inputs
+input UserWordCreateInput {
+    word: ID!
+    user: ID!
+    translation: ID
+    wordEssence: ID
+}
+
+input UserWordFindOneInput {
+    id: ID
+    word: ID
+    user: ID
+}
+
+input UserWordFindInput {
+    id: ID
+    word: ID
+    translation: ID
+    wordEssence: ID
+    createdAt: Date
+    updatedAt: Date
+}
+
+input UserWordUpdateInput {
+    id: ID
+    word: ID
+    user: ID
+    translation: ID
+    wordEssence: ID
+}

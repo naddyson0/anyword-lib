@@ -1,0 +1,46 @@
+# Types
+type Word implements Timestamps {
+    id: ID!
+    word: String!
+    wordEssence: WordEssence
+    language: Language
+
+    # Interface required
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+# Inputs
+input WordCreateInput {
+    word: String!
+    language: ID
+    wordEssence: ID
+}
+
+input WordFindOneInput {
+    id: ID
+    word: String
+    translation: String
+    language: ID
+    wordEssence: ID
+    createdAt: Date
+    updatedAt: Date
+}
+
+input WordFindInput {
+    id: ID
+    word: String
+    translation: String
+    language: ID
+    wordEssence: ID
+    createdAt: Date
+    updatedAt: Date
+}
+
+
+input WordUpdateInput {
+    id: ID!
+    word: String
+    translation: String
+    wordEssence: ID
+}
